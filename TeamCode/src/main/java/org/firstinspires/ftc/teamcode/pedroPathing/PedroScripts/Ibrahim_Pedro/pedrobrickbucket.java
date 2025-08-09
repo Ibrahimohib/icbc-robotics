@@ -6,6 +6,7 @@ import com.pedropathing.pathgen.BezierLine;
 import com.pedropathing.pathgen.Path;
 import com.pedropathing.pathgen.PathChain;
 import com.pedropathing.pathgen.Point;
+import com.pedropathing.util.Constants;
 import com.pedropathing.util.Timer;
 import  com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
@@ -156,7 +157,7 @@ public class pedrobrickbucket extends OpMode {
             case 0:
                 follower.followPath(scorebasket);
                 setPathState(1);
-                telemetry.addData("path state", "0");
+                telemetry.addData("path state", "1");
                 break;
 
             case 1:
@@ -174,7 +175,7 @@ public class pedrobrickbucket extends OpMode {
                     /* Since this is a pathChain, we can have Pedro hold the end point while we are grabbing the sample */
                     follower.followPath(line1,true);
                     setPathState(2);
-                    telemetry.addData("path state", "1");
+                    telemetry.addData("path state", "2");
                 }
                 break;
 
@@ -183,7 +184,7 @@ public class pedrobrickbucket extends OpMode {
 
                     follower.followPath(line2,true);
                     setPathState(3);
-                    telemetry.addData("Path state","2");
+                    telemetry.addData("Path state","3");
 
 
                 }
@@ -197,8 +198,7 @@ public class pedrobrickbucket extends OpMode {
 
                     follower.followPath(line3,true);
                     setPathState(4);
-                    telemetry.addData("Path state", "3");
-
+                    telemetry.addData("Path state", "4");
                 }
                 break;
             case 4:
@@ -210,12 +210,12 @@ public class pedrobrickbucket extends OpMode {
 
 
                     follower.followPath(line4,true);
-                    setPathState(4);
+                    setPathState(5);
 
 
 
                 }
-                telemetry.addData("Path state", "4");
+                telemetry.addData("Path state", "5");
                 break;
         }
     }
